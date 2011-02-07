@@ -1,0 +1,118 @@
+\documentclass[letterpaper]{scrartcl}	% classe article di KOMA
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+%\usepackage[latin1]{inputenc}	% la codifica di input
+%\usepackage[T1]{fontenc}	% la codifica dei font
+\usepackage[LabelsAligned]{currvita}	% un buon pacchetto per CV
+\usepackage[nochapters]{classicthesis} % stile ClassicThesis
+\usepackage{url}	% per gli indirizzi Internet
+\usepackage{verbatim}
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+%Setup hyperref package, and colours for links, text and headings
+\usepackage{hyperref}		
+\hypersetup{	colorlinks,breaklinks,
+			urlcolor=Maroon, 
+			linkcolor=Maroon}
+\usepackage{eurosym}
+\newlength{\datebox}\settowidth{\datebox}{August 2009 - May 2010}
+
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
+
+\newcommand{\Sep}{\vspace{2em}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{cv}{  \spacedallcaps{Mantas A. Vidutis} }
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Personal Data}
+\vspace{0.5em}
+
+% Top line of personal data, used to be a birthday
+% \NewWorkExperience{}{\textit{Chicago,}}{13 November 1920}
+
+\NewWorkExperience{email}{\href{mailto:mantas@vidutis.com}{mantas@vidutis.com}}{}
+
+\NewWorkExperience{phone}{+1 301 300 6122}{}
+\vspace{1.5em}
+
+\noindent\spacedlowsmallcaps{Work Experience}
+\vspace{0.5em}
+
+\NewWorkExperience{May 2010 - Current}{Backstop Solutions Group, Chicago}{}
+
+\Description{\MarginDate{Accounting \& CRM}Enterprise Java development on BSG’s main Accounting/CRM platform, as well as original development on scalable services to sync email from Exchange 2007/2010 servers. Following an Agile (Scrum) development model with a two week development iteration. Technologies used include Thrift and Hibernate. Testing tools include FitNesse, JUnit and Squish.}
+
+\Sep
+
+\NewWorkExperience{August 2009 - May 2010}{N. Illinois Hockey League, Chicago}{}
+
+\Description{\MarginDate{Statistics \& Tournament Scheduling}A dynamic user, schedule and statistics management system written in Python using Django, SQLite and PostgreSQL. My personal contributions included the game scheduling algorithm and the statistics page filtering.}
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Open Source Contributions}
+\vspace{0.5em}
+
+\NewWorkExperience{2010}{Mahout, Apache}{}
+
+\Description{\MarginDate{Machine Learning, Data Mining}Designed and implemented a decision tree learning and classifying tool that runs on top of Hadoop. The concept was inspired by the Google PLANET paper on distributed decision trees. Mahout is a machine learning framework written in Java. }
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Education}
+\vspace{0.5em}
+
+\NewWorkExperience{May 2011}{Illinois Institute of Technology, Chicago}{}
+
+\Description{Major: Computer Science\ \ $\cdotp$\ \  Minor: Psychology\MarginDate{Bachelor of Science}\newline Advisor: Prof.~Mattox \textsc{Beckman}\ \ $\cdotp$\ \  Major Gpa: 3.2/4}
+
+\begin{comment}
+\Sep
+
+\NewWorkExperience{July 2006}{Bocconi University,}{Milan}
+
+\Description{Major: Computer Science\ \ $\cdotp$\ \  \MarginDate{Some Other Education}\newline Thesis: ``Sublinear and Locally Sublinear Prices'' \newline Advisor: Prof.~Mattox \textsc{Beckman}\ \ $\cdotp$\ \  Gpa: 28.61/30}
+
+\end{comment}
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Honors}
+\vspace{0.5em}
+
+\Description{Camras Heald Scholarship \ \ $\cdotp$\ \ IIT University Scholarship }
+\MarginDate{Scholarships}
+
+\vspace{0.5em}
+
+\Description{IIT Dean's List \ \ $\cdotp$\ \ IPRO Presentation First Place (Fall 2009)}
+\MarginDate{Awards}
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Additional Information}
+\vspace{0.5em}
+
+\newlength{\langbox}
+\settowidth{\langbox}{American English}
+\Description{\parbox{\langbox}{\textsc{American English}}\ \ $\cdotp$\ \  \ Fluent}
+\MarginDate{Spoken Languages}
+\vspace{0.5em}
+
+\Description{\parbox{\langbox}{\textsc{Lithuanian}}\ \ $\cdotp$\ \  \ Fluent}
+\vspace{0.5em}
+\Description{\parbox{\langbox}{\textsc{French}}\ \ $\cdotp$\ \  \ Elementary}
+
+\vspace{1em}
+
+\Description{Aikido\ \ $\cdotp$\ \ Typography\ \ $\cdotp$\ \  Photography\MarginDate{Personal Interests}}
+\enlargethispage{\baselineskip}
+\end{cv}
+\end{document}
