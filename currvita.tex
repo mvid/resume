@@ -1,8 +1,7 @@
-\documentclass[letterpaper]{scrartcl}	% classe article di KOMA
+\documentclass[article]{scrartcl}    % classe article di KOMA
+%\usepackage[total={8.5in,10.75in}, top=1.2in, left=0.9in, right=0.9in, includefoot]{geometry}
 \reversemarginpar
 \newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
-%\usepackage[latin1]{inputenc}	% la codifica di input
-%\usepackage[T1]{fontenc}	% la codifica dei font
 \usepackage[LabelsAligned]{currvita}	% un buon pacchetto per CV
 \usepackage[nochapters]{classicthesis} % stile ClassicThesis
 \usepackage{url}	% per gli indirizzi Internet
@@ -15,11 +14,13 @@
 \hypersetup{	colorlinks,breaklinks,
 			urlcolor=Maroon, 
 			linkcolor=Maroon}
-\usepackage{eurosym}
 \newlength{\datebox}\settowidth{\datebox}{August 2009 - May 2010}
 
 \newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3
 \vspace{0.5em}}
+
+\areaset[15mm]{360pt}{750pt}
+\setlength{\marginparwidth}{7em}
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
 
@@ -62,7 +63,21 @@
 
 \NewWorkExperience{2010}{Mahout, Apache}{}
 
-\Description{\MarginDate{Machine Learning, Data Mining}Designed and implemented a decision tree learning and classifying tool that runs on top of Hadoop. The concept was inspired by the Google PLANET paper on distributed decision trees. Mahout is a machine learning framework written in Java. }
+\Description{\MarginDate{Machine Learning \& Data Mining}Designed and implemented a decision tree learning and classifying tool that runs on top of Hadoop. The concept was inspired by the Google PLANET paper on distributed decision trees. Mahout is a machine learning framework written in Java. }
+
+\vspace{1.5em}
+
+\spacedlowsmallcaps{Languages}
+\vspace{0.5em}
+
+\newlength{\techbox}
+\settowidth{\techbox}{Objective C}
+\Description{\parbox{\techbox}{\textsc{Java}}\ \ $\cdotp$\ \  \ \parbox{\techbox}{\textsc{Python}}}
+\MarginDate{Advanced}
+\vspace{0.5em}
+
+\Description{\parbox{\techbox}{\textsc{Clojure}}\ \ $\cdotp$\ \  \ \parbox{\techbox}{\textsc{Haskell}}\ \ $\cdotp$\ \  \ \parbox{\techbox}{\textsc{Objective C}}\ \ $\cdotp$\ \  \ \parbox{\techbox}{\textsc{JavaScript}}} 
+\MarginDate{Intermediate}
 
 \vspace{1.5em}
 
@@ -71,7 +86,7 @@
 
 \NewWorkExperience{May 2011}{Illinois Institute of Technology, Chicago}{}
 
-\Description{Major: Computer Science\ \ $\cdotp$\ \  Minor: Psychology\MarginDate{Bachelor of Science}\newline Advisor: Prof.~Mattox \textsc{Beckman}\ \ $\cdotp$\ \  Major Gpa: 3.2/4}
+\Description{Major: Computer Science\ \ $\cdotp$\ \  Advisor: Prof.~Mattox \textsc{Beckman}\MarginDate{Bachelor of Science}}
 
 \begin{comment}
 \Sep
@@ -94,6 +109,11 @@
 
 \Description{IIT Dean's List \ \ $\cdotp$\ \ IPRO Presentation First Place (Fall 2009)}
 \MarginDate{Awards}
+
+\vspace{0.5em}
+
+\Description{ACM IIT President \ \ $\cdotp$ \ \ Local Area Network Club President}
+\MarginDate{Leadership}
 
 \vspace{1.5em}
 
