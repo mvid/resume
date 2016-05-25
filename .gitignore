@@ -2,3 +2,6 @@ mantas-vidutis-base.aux
 mantas-vidutis-base.log
 mantas-vidutis-base.out
 mantas-vidutis-base.synctex.gz
+
+# mac
+.DS_Store
